@@ -6,7 +6,7 @@ public class main {
 	//*
 	public static void main(String[] args) {
 		int SIZE = 10;
-		int[] array = {11,23,22,10,-24,4,69,45,30,100};
+		int[] array = {11,23,22,10,-24,4,69,45,30,99};
 		printArray(array, 10);
 	}
 	

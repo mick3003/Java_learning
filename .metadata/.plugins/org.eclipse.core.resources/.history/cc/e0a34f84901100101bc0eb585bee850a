@@ -1,0 +1,34 @@
+package miprimerprograma;
+
+public class main {
+
+	public static void main(String[] args) {
+		int numberOfRows = 8;
+		printPiramid(numberOfRows); 
+
+	}
+	
+	public static void printPiramid(int numRows) {
+		for (int row = 1; row <= numRows; row++) {
+			printRow(row);
+		}
+			
+	}
+	
+	
+	public static void printRow(int rowNumber) {
+		 for(int i = 0; i < rowNumber; i++) {
+			 System.out.print((i + rowNumber) % 10);
+			 System.out.print(" ");
+		 }
+		 
+		 for(int i = rowNumber - 1; i > 0; i--) {
+			 System.out.print((i + rowNumber - 1) % 10);
+			 System.out.print(" ");
+		 }
+		 
+		 System.out.println();
+		 
+	}
+
+}

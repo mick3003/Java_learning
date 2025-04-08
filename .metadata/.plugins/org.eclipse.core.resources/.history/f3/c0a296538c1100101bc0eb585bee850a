@@ -1,0 +1,26 @@
+package miprimerprograma;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		printRow(8);
+	}
+	
+	
+	public static void printRow(int rowNumber) {
+		 for(int i = 0; i < rowNumber; i++) {
+			 System.out.print((i + rowNumber) % 10);
+			 System.out.print(" ");
+		 }
+		 
+		 for(int i = rowNumber - 1; i > 0; i--) {
+			 System.out.print((i + rowNumber));
+			 System.out.print(" ");
+		 }
+		 
+		 System.out.println();
+		 
+	}
+
+}

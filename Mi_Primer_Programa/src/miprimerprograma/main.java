@@ -5,7 +5,7 @@ public class main {
 	// ALGORITMOS DE ORDENACIÓN DE ARRAYS
 	//*
 	public static void main(String[] args) {
-		System.out.println("Hola");
+		System.out.println("God bye");
 	}
 	
 	// ALGORITMOS DE ORDENACIÓN DE ARRAYS

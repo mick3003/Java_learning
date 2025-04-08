@@ -5,7 +5,21 @@ public class main {
 	// ALGORITMOS DE ORDENACIÓN DE ARRAYS
 	//*
 	public static void main(String[] args) {
-		System.out.println("God bye");
+		int SIZE = 10;
+		int[] array = {11,23,22,10,-24,4,69,45,30,100};
+		printArray(array, 10);
+	}
+	
+	public static void printArray(int[] polla, int pollaSize) {
+		for (int i = 0; i < pollaSize; i++) {
+			System.out.print(polla[i]);
+			if (i != pollaSize -1) {
+				System.out.print(", ");
+			}
+			else {
+				System.out.print(".");
+			}
+		}
 	}
 	
 	// ALGORITMOS DE ORDENACIÓN DE ARRAYS

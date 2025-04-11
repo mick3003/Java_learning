@@ -1,13 +1,44 @@
 package miprimerprograma;
 
+
 public class main {
+	
+	//*
+	// FUNCIÓN FACTORIAL
+	public static void main(String[] args) {
+		int n = 11;
+		System.out.print(factorial(n));
+	}
+	
+	public static int factorial(int n) {
+		return -1;
+	}
+	// FIN FUNCIÓN FACTORIAL
+	// */
 
 	// ALGORITMOS DE ORDENACIÓN DE ARRAYS
-	//*
+	/*
+	
 	public static void main(String[] args) {
-		int SIZE = 10;
-		int[] array = {11,23,22,10,-24,4,69,45,30,99};
-		printArray(array, 10);
+		int SIZE = 12;
+		int[] array = {11,1023,10,-24,4,69,89,97,4,45,30,99};
+		
+		printArray(array, SIZE);
+		
+		boolean isOrdered = false;
+		while (!isOrdered) {
+			isOrdered = true;
+			for (int i = 0; i < SIZE; i++) {
+				if ( i != SIZE -1 && array[i] > array[i+1] ) {
+					int temp = array[i];
+					array[i] = array[i+1];
+					array[i+1] = temp;
+					isOrdered = false;
+				}
+			}
+		}
+		
+		printArray(array, SIZE);
 	}
 	
 	public static void printArray(int[] polla, int pollaSize) {
@@ -20,6 +51,7 @@ public class main {
 				System.out.print(".");
 			}
 		}
+		System.out.println("");
 	}
 	
 	// ALGORITMOS DE ORDENACIÓN DE ARRAYS

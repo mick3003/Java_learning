@@ -3,7 +3,7 @@ package miprimerprograma;
 
 public class main {
 	
-	//*
+	/*
 	// FUNCIÓN FACTORIAL
 	public static void main(String[] args) {
 		int n = 11;

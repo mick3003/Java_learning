@@ -1,31 +1,64 @@
 package miprimerprograma;
 
+import java.util.Scanner;
 
 public class main {
-	
+	static final int PREC = 12;
 	//*
 	// FUNCIÓN FACTORIAL
 	public static void main(String[] args) {
-		int n = -13;
-		System.out.print(factorial(n));
+		/*
+		int n = 0;
+		System.out.print("Introduce un número: ");
+		Scanner scanner = new Scanner(System.in);
+		n = scanner.nextInt();
+		int result = factorial(n);
+		if (result == -1) {
+			System.out.println("No se puede calcular el factorial");
+		}
+		else {
+			System.out.println("El factorial de " + n + " es " + result);
+		}
+		*/
+		System.out.println(exp(2));
 	}
 	
 	public static int factorial(int n) {
-			int resultado = 1;
-			if (n > 12) {
-				return -1;
-			}
-			if (n < 0) {
-				return -1;
-			}
-			for (int i = 1; i <= n; i++) {
-			resultado *= i;
+		int result = 1;
+		if (n > PREC || n < 0) {
+			return -1;
 		}
-	return resultado;
+		for (int i = 1; i <= n; i++) {
+			result *= i;
+		}
+		return result;
 	}
+	
+	
+	public static double power(double base, int exp) {
+		double result = 1;
+		for (int c = 1; c <= exp; c+=1 ) {
+			result *= base;
+		}
+		return result;
+	}
+	
+	
+	public static double exp(int x) {
+		double result = 1;
+		
+		for (int c = 1; c <= PREC; c++ ) {
+			double pow = power(x, c);
+			int fact = factorial(c);
+			result += (pow / fact);
+		}
+		return result;
+	}
+	
 	// FIN FUNCIÓN FACTORIAL
 	// */
 
+	
 	// ALGORITMOS DE ORDENACIÓN DE ARRAYS
 	/*
 	
@@ -64,7 +97,7 @@ public class main {
 		System.out.println("");
 	}
 	
-	// ALGORITMOS DE ORDENACIÓN DE ARRAYS
+	// FIN ALGORITMOS DE ORDENACIÓN DE ARRAYS
 	// */
 	
 	
@@ -100,7 +133,7 @@ public class main {
 		 System.out.println();
 	}
 	
-	// EJERCICIO PIRÁMIDE NUMÉRICA
+	// FIN EJERCICIO PIRÁMIDE NUMÉRICA
 	// */
 
 }

@@ -6,12 +6,22 @@ public class main {
 	//*
 	// FUNCIÓN FACTORIAL
 	public static void main(String[] args) {
-		int n = 11;
+		int n = -13;
 		System.out.print(factorial(n));
 	}
 	
 	public static int factorial(int n) {
-		return -1;
+			int resultado = 1;
+			if (n > 12) {
+				return -1;
+			}
+			if (n < 0) {
+				return -1;
+			}
+			for (int i = 1; i <= n; i++) {
+			resultado *= i;
+		}
+	return resultado;
 	}
 	// FIN FUNCIÓN FACTORIAL
 	// */

@@ -3,11 +3,57 @@ package miprimerprograma;
 import java.util.Scanner;
 
 public class main {
-	static final int PREC = 12;
-	//*
-	// FUNCIÓN FACTORIAL
+
+	
 	public static void main(String[] args) {
+	
+		Scanner scanner = new Scanner(System.in);
+			System.out.println("Ingrese la operación");
+				String option = scanner.nextLine();
+			System.out.println("Dato1");
+				int num1 = scanner.nextInt();
+			System.out.println("Dato2");
+				double num2 = scanner.nextDouble();
+		
+		
+		switch(option) {
+		case "sumar":
+			double result = add(num1,num2);
+			System.out.println("El resultado es: " + result);
+		break;
+		
+		case "restar":
+			double result1 = subt(num1,num2);
+			System.out.println("El resultado es: " + result1);
+		break;
+		
+		case "multiplicar":
+			double result2 = mult(num1,num2);
+			System.out.println("El resultado es: " + result2);
+		break;
+		
+		case "dividir":
+			double result3 = div(num1,num2);
+			System.out.println("El resultado es: " + result3);
+		break;
+		
+		case "potencia":
+			double result4 = power(num2,num1);
+			System.out.println("El resultado es: " + result4);
+		break;
+			
+		case "exponencial":
+			double result5 = exp(num1);
+			System.out.println("El resultado es: " + result5);
+		break;
+		
+		case "factorial":
+			double result6 = factorial(num1);
+			System.out.println("El resultado es: " + result6);
+		break;
+		}
 		/*
+		static final int PREC = 33;
 		int n = 0;
 		System.out.print("Introduce un número: ");
 		Scanner scanner = new Scanner(System.in);
@@ -19,9 +65,32 @@ public class main {
 		else {
 			System.out.println("El factorial de " + n + " es " + result);
 		}
-		*/
+		
 		System.out.println(exp(2));
+		*/
+		
 	}
+	
+	public static double div(double num1, double num2) {
+		return num1 / num2;
+	}
+	
+	
+	public static double mult(double num1, double num2) {
+		return num1 * num2;
+	}
+	
+	
+	public static double subt(double num1, double num2) {
+		return num1 - num2;
+	}
+	
+	
+	public static double add(double a, double b) {
+		return a + b;	
+	}
+	
+	
 	
 	public static int factorial(int n) {
 		int result = 1;

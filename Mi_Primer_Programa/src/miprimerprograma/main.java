@@ -4,56 +4,60 @@ import java.util.Scanner;
 
 public class main {
 
+	static final int PREC = 33;
 	
 	public static void main(String[] args) {
-	
-		Scanner scanner = new Scanner(System.in);
-			System.out.println("Ingrese la operación");
-				String option = scanner.nextLine();
-			System.out.println("Dato1");
-				int num1 = scanner.nextInt();
-			System.out.println("Dato2");
-				double num2 = scanner.nextDouble();
+		double result = 0;
+		printMenu();
 		
 		
+		int option = new Scanner(System.in).nextInt();
+		double[] operands;
 		switch(option) {
-		case "sumar":
-			double result = add(num1,num2);
+		case 1:
+			operands = scanner(2);
+			result = add(operands[0],operands[1]);
 			System.out.println("El resultado es: " + result);
 		break;
 		
-		case "restar":
-			double result1 = subt(num1,num2);
-			System.out.println("El resultado es: " + result1);
+		case 2:
+			operands = scanner(2);
+			result = subt(operands[0],operands[1]);
+			System.out.println("El resultado es: " + result);
 		break;
 		
-		case "multiplicar":
-			double result2 = mult(num1,num2);
-			System.out.println("El resultado es: " + result2);
+		case 3:
+			operands = scanner(2);
+			result = mult(operands[0],operands[1]);
+			System.out.println("El resultado es: " + result);
 		break;
 		
-		case "dividir":
-			double result3 = div(num1,num2);
-			System.out.println("El resultado es: " + result3);
+		case 4:
+			operands = scanner(2);
+			result = div(operands[0],operands[1]);
+			System.out.println("El resultado es: " + result);
 		break;
 		
-		case "potencia":
-			double result4 = power(num2,num1);
-			System.out.println("El resultado es: " + result4);
+		case 5:
+			operands = scanner(2);
+			result = power(operands[0],(int)operands[1]);
+			System.out.println("El resultado es: " + result);
 		break;
 			
-		case "exponencial":
-			double result5 = exp(num1);
-			System.out.println("El resultado es: " + result5);
+		case 6:
+			operands = scanner(1);
+			result = exp((int)operands[0]);
+			System.out.println("El resultado es: " + result);
 		break;
 		
-		case "factorial":
-			double result6 = factorial(num1);
-			System.out.println("El resultado es: " + result6);
+		case 7:
+			operands = scanner(1);
+			result = factorial((int)operands[0]);
+			System.out.println("El resultado es: " + result);
 		break;
 		}
 		/*
-		static final int PREC = 33;
+		
 		int n = 0;
 		System.out.print("Introduce un número: ");
 		Scanner scanner = new Scanner(System.in);
@@ -70,6 +74,32 @@ public class main {
 		*/
 		
 	}
+	
+	
+	public static double[] scanner(int count) {
+		double[] data = new double [7];
+		Scanner scanner = new Scanner(System.in);
+		for (int i = 0; i < count; i++ ) {
+			System.out.print("Dato " + (i+1) + ": " );
+			data[i] = scanner.nextDouble();
+		}
+		return data;
+	}
+	
+	
+	public static void printMenu() {
+		System.out.println("Calculadora mágica");
+		System.out.println("   1. Sumar");
+		System.out.println("   2. Restar");
+		System.out.println("   3. Multiplicar");
+		System.out.println("   4. Dividir");
+		System.out.println("   5. Potencia");
+		System.out.println("   6. Exponencial");
+		System.out.println("   7. Factorial");
+		System.out.println("");
+		System.out.print("Introduzca código de operación: ");
+	}
+	
 	
 	public static double div(double num1, double num2) {
 		return num1 / num2;

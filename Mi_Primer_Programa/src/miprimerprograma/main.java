@@ -9,45 +9,27 @@ public class main {
 
 		System.out.println("Introduzca los Datos:");
 		array = scanner();
-		printArray(array.numbers, array.count);
-		System.out.println();
+
+		
+		//printArray(array.numbers, array.count);
+		array.print();
 		System.out.println("El máximo es " + array.max);
 		System.out.println("El mínimo es " + array.min);
 	}
 
 	public static MyArray scanner() {
 		MyArray myArray = new MyArray();
-		myArray.numbers = new int[50];
-		myArray.count = 0;
 		Scanner scanner = new Scanner(System.in);
-		myArray.max = Integer.MIN_VALUE;
-		myArray.min = Integer.MAX_VALUE;
-
 		for (int i = 0; i < 50; i++) {
 			System.out.print("Dato " + (i + 1) + ": ");
-			myArray.numbers[i] = scanner.nextInt();
-			if (myArray.numbers[i] == -999) {
+			int number = scanner.nextInt();
+			if (number == -999) {
 				return myArray;
 			} else {
-				myArray.count ++;
-				if (myArray.numbers[i] > myArray.max) {
-					myArray.max = myArray.numbers[i];
-				}
-				if (myArray.numbers[i] < myArray.min) {
-					myArray.min = myArray.numbers[i];
-				}
+				myArray.addNumber(number);
 			}
 		}
 		return myArray;
-	}
-
-
-	public static void printArray(int[] array, int size) {
-		for (int i = 0; i < size; i++) {
-			System.out.print(array[i] + " ");
-
-
-		}
 	}
 }
 

@@ -2,7 +2,70 @@ package miprimerprograma;
 
 import java.util.Scanner;
 
+
 public class main {
+	public static void main(String[] args) {
+		MyArray array;
+
+		System.out.println("Introduzca los Datos:");
+		array = scanner();
+		printArray(array.numbers, array.count);
+		System.out.println();
+		System.out.println("El máximo es " + array.max);
+		System.out.println("El mínimo es " + array.min);
+	}
+
+	public static MyArray scanner() {
+		MyArray myArray = new MyArray();
+		myArray.numbers = new int[50];
+		myArray.count = 0;
+		Scanner scanner = new Scanner(System.in);
+		myArray.max = Integer.MIN_VALUE;
+		myArray.min = Integer.MAX_VALUE;
+
+		for (int i = 0; i < 50; i++) {
+			System.out.print("Dato " + (i + 1) + ": ");
+			myArray.numbers[i] = scanner.nextInt();
+			if (myArray.numbers[i] == -999) {
+				return myArray;
+			} else {
+				myArray.count ++;
+				if (myArray.numbers[i] > myArray.max) {
+					myArray.max = myArray.numbers[i];
+				}
+				if (myArray.numbers[i] < myArray.min) {
+					myArray.min = myArray.numbers[i];
+				}
+			}
+		}
+		return myArray;
+	}
+
+
+	public static void printArray(int[] array, int size) {
+		for (int i = 0; i < size; i++) {
+			System.out.print(array[i] + " ");
+
+
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	//*/
+	// CALCULADORA MÁGICA
+	/*
 
 	static final int PREC = 33;
 	
@@ -55,29 +118,12 @@ public class main {
 			result = factorial((int)operands[0]);
 			System.out.println("El resultado es: " + result);
 		break;
-		}
-		/*
-		
-		int n = 0;
-		System.out.print("Introduce un número: ");
-		Scanner scanner = new Scanner(System.in);
-		n = scanner.nextInt();
-		int result = factorial(n);
-		if (result == -1) {
-			System.out.println("No se puede calcular el factorial");
-		}
-		else {
-			System.out.println("El factorial de " + n + " es " + result);
-		}
-		
-		System.out.println(exp(2));
-		*/
-		
+		}	
 	}
 	
 	
 	public static double[] scanner(int count) {
-		double[] data = new double [7];
+		double[] data = new double [17];
 		Scanner scanner = new Scanner(System.in);
 		for (int i = 0; i < count; i++ ) {
 			System.out.print("Dato " + (i+1) + ": " );
@@ -154,10 +200,10 @@ public class main {
 		return result;
 	}
 	
-	// FIN FUNCIÓN FACTORIAL
+	//FIN CALCULADORA MÁIGICA
 	// */
-
 	
+
 	// ALGORITMOS DE ORDENACIÓN DE ARRAYS
 	/*
 	
@@ -235,4 +281,4 @@ public class main {
 	// FIN EJERCICIO PIRÁMIDE NUMÉRICA
 	// */
 
-}
+

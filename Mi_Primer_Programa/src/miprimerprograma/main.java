@@ -4,8 +4,33 @@ import java.util.Scanner;
 
 
 public class main {
+
 	public static void main(String[] args) {
-		MyArray array;
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("¿Cuántos elementos de la serie de Fibonacci quieres ver?");
+		int n = scanner.nextInt();
+		int a = 0;
+		int b = 1;
+
+		for (int i = 0; i < n; i++){
+			System.out.print(a + ",");
+			int next = a + b;
+			a = b;
+			b = next;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+	/*/	MyArray array;
 
 		System.out.println("Introduzca los Datos:");
 		array = scanner();
@@ -30,7 +55,7 @@ public class main {
 			}
 		}
 		return myArray;
-	}
+	} /*
 }
 
 

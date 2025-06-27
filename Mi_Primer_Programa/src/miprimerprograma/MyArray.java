@@ -1,12 +1,12 @@
 package miprimerprograma;
 
 public class MyArray {
-    int[] numbers = new int[50];
+    long[] numbers = new long[50];
     private int count = 0;
-    int max = Integer.MIN_VALUE;
-    int min = Integer.MAX_VALUE;
+    long max = Long.MIN_VALUE;
+    long min = Long.MAX_VALUE;
 
-    public void addNumber(int number) {
+    public void addNumber(long number) {
         numbers[count] = number;
         count ++;
         if (number > max) {

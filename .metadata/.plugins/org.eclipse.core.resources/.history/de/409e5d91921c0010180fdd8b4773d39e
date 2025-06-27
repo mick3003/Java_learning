@@ -2,79 +2,7 @@ package miprimerprograma;
 
 import java.util.Scanner;
 
-
 public class main {
-
-	public static void main(String[] args) {
-		/*Scanner scanner = new Scanner(System.in);
-		System.out.print("¿Cuántos elementos de la serie de Fibonacci quieres ver? ");
-		int n = scanner.nextInt();
-		Fibo fibo = new Fibo();
-		MyArray serie = fibo.createSerie(n);
-		serie.print();
-		*/
-		Coche bmw = new Coche();
-		bmw.abreMaletero();
-		bmw.arrancarMotor();
-		System.out.println("El número de ruedas del bmw es: " + bmw.numRuedas);
-		Motocicleta honda = new Motocicleta();
-		honda.arrancarMotor();
-		System.out.println("El número de ruedas de la honda es: " + honda.numRuedas);
-	}
-}
-
-
-
-
-
-
-
-
-
-
-	/*/	MyArray array;
-
-		System.out.println("Introduzca los Datos:");
-		array = scanner();
-
-		
-		//printArray(array.numbers, array.count);
-		array.print();
-		System.out.println("El máximo es " + array.max);
-		System.out.println("El mínimo es " + array.min);
-	}
-
-	public static MyArray scanner() {
-		MyArray myArray = new MyArray();
-		Scanner scanner = new Scanner(System.in);
-		for (int i = 0; i < 50; i++) {
-			System.out.print("Dato " + (i + 1) + ": ");
-			int number = scanner.nextInt();
-			if (number == -999) {
-				return myArray;
-			} else {
-				myArray.addNumber(number);
-			}
-		}
-		return myArray;
-	} /*
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-	//*/
-	// CALCULADORA MÁGICA
-	/*
 
 	static final int PREC = 33;
 	
@@ -117,25 +45,42 @@ public class main {
 		break;
 			
 		case 6:
-			operands = scanner(1);
+			operands = scanner(2);
 			result = exp((int)operands[0]);
 			System.out.println("El resultado es: " + result);
 		break;
 		
 		case 7:
-			operands = scanner(1);
+			operands = scanner(2);
 			result = factorial((int)operands[0]);
 			System.out.println("El resultado es: " + result);
 		break;
-		}	
+		}
+		/*
+		
+		int n = 0;
+		System.out.print("Introduce un número: ");
+		Scanner scanner = new Scanner(System.in);
+		n = scanner.nextInt();
+		int result = factorial(n);
+		if (result == -1) {
+			System.out.println("No se puede calcular el factorial");
+		}
+		else {
+			System.out.println("El factorial de " + n + " es " + result);
+		}
+		
+		System.out.println(exp(2));
+		*/
+		
 	}
 	
 	
 	public static double[] scanner(int count) {
-		double[] data = new double [17];
+		double[] data = new double [7];
 		Scanner scanner = new Scanner(System.in);
 		for (int i = 0; i < count; i++ ) {
-			System.out.print("Dato " + (i+1) + ": " );
+			System.out.print("Dato 1" );
 			data[i] = scanner.nextDouble();
 		}
 		return data;
@@ -209,10 +154,10 @@ public class main {
 		return result;
 	}
 	
-	//FIN CALCULADORA MÁGICA
+	// FIN FUNCIÓN FACTORIAL
 	// */
-	
 
+	
 	// ALGORITMOS DE ORDENACIÓN DE ARRAYS
 	/*
 	
@@ -290,4 +235,4 @@ public class main {
 	// FIN EJERCICIO PIRÁMIDE NUMÉRICA
 	// */
 
-
+}

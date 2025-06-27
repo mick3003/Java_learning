@@ -2,77 +2,15 @@ package miprimerprograma;
 
 import java.util.Scanner;
 
-
 public class main {
-
+	
 	public static void main(String[] args) {
-		/*Scanner scanner = new Scanner(System.in);
-		System.out.print("¿Cuántos elementos de la serie de Fibonacci quieres ver? ");
-		int n = scanner.nextInt();
-		Fibo fibo = new Fibo();
-		MyArray serie = fibo.createSerie(n);
-		serie.print();
-		*/
-		Coche bmw = new Coche();
-		bmw.abreMaletero();
-		bmw.arrancarMotor();
-		System.out.println("El número de ruedas del bmw es: " + bmw.numRuedas);
-		Motocicleta honda = new Motocicleta();
-		honda.arrancarMotor();
-		System.out.println("El número de ruedas de la honda es: " + honda.numRuedas);
-	}
-}
-
-
-
-
-
-
-
-
-
-
-	/*/	MyArray array;
-
-		System.out.println("Introduzca los Datos:");
-		array = scanner();
-
-		
-		//printArray(array.numbers, array.count);
-		array.print();
-		System.out.println("El máximo es " + array.max);
-		System.out.println("El mínimo es " + array.min);
-	}
-
-	public static MyArray scanner() {
-		MyArray myArray = new MyArray();
-		Scanner scanner = new Scanner(System.in);
-		for (int i = 0; i < 50; i++) {
-			System.out.print("Dato " + (i + 1) + ": ");
-			int number = scanner.nextInt();
-			if (number == -999) {
-				return myArray;
-			} else {
-				myArray.addNumber(number);
-			}
+		int count = 3;
+		for (int i = 0; i < count; i = i+1) {
+			System.out.println("i vale: " + i);
 		}
-		return myArray;
-	} /*
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-	//*/
+	}
+	
 	// CALCULADORA MÁGICA
 	/*
 
@@ -209,7 +147,7 @@ public class main {
 		return result;
 	}
 	
-	//FIN CALCULADORA MÁGICA
+	//FIN CALCULADORA MÁIGICA
 	// */
 	
 
@@ -290,4 +228,4 @@ public class main {
 	// FIN EJERCICIO PIRÁMIDE NUMÉRICA
 	// */
 
-
+}
